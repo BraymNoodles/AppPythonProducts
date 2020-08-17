@@ -1,6 +1,10 @@
 from tkinter import ttk
 from tkinter import *
 import sqlite3
+import os
+import sys
+
+appdir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
 
 class Product:
 
@@ -47,7 +51,7 @@ class Product:
         self.get_products()
 
     def run_query(self, query, parameters=()):
-        with sqlite3.connect(self.db_name) as conn:
+        with sqlite3.connect(os.path.join(appdir, self.db_name)) as conn:
             cursor=conn.cursor()
             result=cursor.execute(query, parameters)
             conn.commit()
