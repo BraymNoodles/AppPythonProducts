@@ -12,7 +12,7 @@ class Product:
         self.wind=window
         self.wind.title('Products Application')
 
-        #creating a frame container
+        #creating a frame container to show all ttk features
         frame = LabelFrame(self.wind, text="Register A New Product")
         frame.grid(row=0, column=0, columnspan=3, pady=20)
 
@@ -142,4 +142,3 @@ if __name__=="__main__":
     window.mainloop()
 
 
-    
