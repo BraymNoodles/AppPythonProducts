@@ -43,7 +43,7 @@ class Product:
         ttk.Button(text="Delete", command=self.delete_product).grid(row=5, column=0, sticky=W+E)
         ttk.Button(text="Edit", command=self.edit_product).grid(row=5, column=1, sticky=W+E)
 
-        #fill products
+        #fill all products
         self.get_products()
 
     def run_query(self, query, parameters=()):
